@@ -8,8 +8,6 @@ type Props = {
 export function LoginButton({slim, onPress}:Props): JSX.Element {
   console.log(slim ? "yes":"no")
   const internalOnClick = () => {
-    // you logic here 
-
     onPress()
   }
 
