@@ -1,10 +1,10 @@
-import { NavBar } from "./pages/home/components/navbar/NavBar";
+import { Home } from "./pages/home/Home"
 import "./styles.css";
 
 export default function App() {
   return (
     <div className="App">
-      <NavBar/>
+      <Home/>
     </div>
   );
 }
