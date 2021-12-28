@@ -1,5 +1,6 @@
 import "./NavButton.css"
 
+//props passed when calling component
 type Props = {
   label: string,
   onPress: () => void
