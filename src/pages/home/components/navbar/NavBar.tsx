@@ -1,5 +1,6 @@
-import { NavButton } from "./components/NavButton";
+import { NavButton } from "./components/navbutton/NavButton";
 
+import './NavBar.css';
 
 export function NavBar():JSX.Element {
   const redirect = (str: string) => {
