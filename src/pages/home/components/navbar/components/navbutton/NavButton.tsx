@@ -1,3 +1,5 @@
+import "./NavButton.css"
+
 type Props = {
   label: string,
   onPress: () => void

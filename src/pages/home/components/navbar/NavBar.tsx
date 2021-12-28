@@ -9,7 +9,7 @@ export function NavBar():JSX.Element {
 
   return (
     <div>
-      <NavButton label="Home" onPress={redirect("Home")}/>
+      <NavButton label="Home"  onPress={redirect("Home")}/>
       <NavButton label="About" onPress={redirect("About")}/>
       <NavButton label="Login" onPress={redirect("Login")}/>
     </div>
