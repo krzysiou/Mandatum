@@ -1,4 +1,4 @@
-import { NavBar } from "./pages/navbar/NavBar";
+import { NavBar } from "./pages/home/components/navbar/NavBar";
 import "./styles.css";
 
 export default function App() {
