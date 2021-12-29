@@ -1,0 +1,8 @@
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.buttons {
+  margin-right: 3em;
+}
