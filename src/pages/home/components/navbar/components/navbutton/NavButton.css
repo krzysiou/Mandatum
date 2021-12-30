@@ -1,19 +1,15 @@
-button {
+a {
   position: relative;
   cursor: pointer;
   text-decoration: none;
-  background-color: #141414;
   font-size: inherit;
-  margin: 20px 5px;
+  margin: 3em 1em;
   border-radius: 3px;
   border: none;
   font-family: inherit;
-  font-weight: 300;
-  color: #1EAE85;
-  text-transform: uppercase;
-  transition: 300ms;
+  transition: 50ms;
 }
 
-button:hover {
-  background-color: #093428;
+a:hover {
+  color: rgb(160, 160, 160);
 }

@@ -1,5 +1,5 @@
 import { NavButton } from "./components/navbutton/NavButton";
-
+import logo from './logo.svg'
 import './NavBar.css';
 
 export function NavBar():JSX.Element {
@@ -9,10 +9,22 @@ export function NavBar():JSX.Element {
 
   return (
     <div className="top">
-      <div className="buttons">
-        <NavButton label="Home"  onPress={redirect("Home")}/>
-        <NavButton label="About" onPress={redirect("About")}/>
-        <NavButton label="Login" onPress={redirect("Login")}/>
+      <div className="top-left">
+        <div className="logo">
+          <img src={logo} alt="mandatum logo" className="icon" width='50px'/>
+        </div>
+        <div className="buttons">
+          <NavButton label="Friends"  onPress={redirect("Friends")}/>
+          <NavButton label="Recent" onPress={redirect("Recent")}/>
+          <NavButton label="Pinned" onPress={redirect("Pinned")}/>
+        </div>
+      </div>
+      <div className="top-right">
+        <div className="buttons">
+          <NavButton label="Home"  onPress={redirect("Home")}/>
+          <NavButton label="About" onPress={redirect("About")}/>
+          <NavButton label="Login" onPress={redirect("Login")}/>
+        </div>
       </div>
     </div>
   )
