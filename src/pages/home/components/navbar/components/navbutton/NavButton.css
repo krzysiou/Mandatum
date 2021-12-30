@@ -2,9 +2,18 @@ button {
   position: relative;
   cursor: pointer;
   text-decoration: none;
+  background-color: #141414;
   font-size: inherit;
+  margin: 20px 5px;
+  border-radius: 3px;
+  border: none;
   font-family: inherit;
-  font-weight: 600;
-  color: #7B0E81;
+  font-weight: 300;
+  color: #1EAE85;
   text-transform: uppercase;
+  transition: 300ms;
+}
+
+button:hover {
+  background-color: #093428;
 }
