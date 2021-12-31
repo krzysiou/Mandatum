@@ -4,12 +4,12 @@ a {
   text-decoration: none;
   font-size: inherit;
   margin: 1em 1em;
-  border-radius: 3px;
-  border: none;
+  border-bottom: 1px solid whitesmoke;
   font-family: inherit;
   transition: 50ms;
 }
 
 a:hover {
   color: rgb(204, 204, 204);
+  border-color: rgb(204, 204, 204);
 }

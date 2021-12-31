@@ -10,7 +10,7 @@ export function NavBar():JSX.Element {
   return (
     <div className="top">
       <div className="top-left">
-        <div className="logo">
+        <div className="mini-logo">
           <img src={logo} alt="mandatum logo" className="icon" width='40px'/>
         </div>
         <div className="search">

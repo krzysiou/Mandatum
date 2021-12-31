@@ -17,22 +17,23 @@ input {
 }
 .top-right {
   width: 50%;
-  margin-right: 3em;
+  margin-right: 8em;
   display: flex;
   justify-content: flex-end;
-}
-.top-left {
-  margin-left: 1em;
-  width: 40%;
-  display: flex;
-  justify-content: space-evenly;
   align-items: center;
 }
-.logo {
+.top-left {
+  margin-left: 8em;
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.mini-logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  object-fit: cover;  
+  margin-right: 4em;
 }
 
 .buttons {
@@ -44,6 +45,7 @@ input {
 .search {
   padding: 0.15em 0.3em;
   width: 14em;
+  margin-right: 3em;
   background-color: #040e12;
   border-radius: 5px;
   border: 1px solid rgb(63, 63, 63);
