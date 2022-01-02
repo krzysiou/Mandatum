@@ -9,7 +9,7 @@ export function Header(): JSX.Element {
       </div>
       <div className="welcometext">
         <h1>Welcome to Mandatum</h1>
-        <p>Ye Connect with your friends through a website and share time by chatting</p>
+        <p>Ye Testing paragraph Connect with your friends through a website and share time by chatting</p>
       </div>
       <p></p>
     </div>
