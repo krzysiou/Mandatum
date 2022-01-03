@@ -8,6 +8,10 @@ input {
   outline: none;
 }
 
+.dropdown {
+  display: none;
+}
+
 .top {
   background-color: #091d24;
   display: flex;
@@ -51,20 +55,23 @@ input {
   border: 1px solid rgb(63, 63, 63);
 }
 
-@media screen and (max-width: 600px) {
-  input {
-    display: none;
-  }
-  .search {
-    display: none;
-  }
-  .buttons {
-    display: none;
-  }
-}
-
 @media screen and (max-width: 1120px) {
   .buttons {
     display: none;
+  }
+
+  .top-right {
+    display: none;
+  }
+
+  .top-left {
+    width: 100%;
+    justify-content: space-evenly;
+    margin-left: 2em;
+  }
+
+  .dropdown {
+    display: inline;
+    margin-right: 2em;
   }
 }

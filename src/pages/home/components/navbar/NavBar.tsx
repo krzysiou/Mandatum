@@ -21,6 +21,16 @@ export function NavBar():JSX.Element {
           <NavButton label="Recent" onPress={redirect("Recent")}/>
           <NavButton label="Pinned" onPress={redirect("Pinned")}/>
         </div>
+        <div className="dropdown">
+          <select name="cars" id="cars">
+            <option value="login">Log In</option>
+            <option value="about">About</option>
+            <option value="home">Home</option>
+            <option value="friends">Friends</option>
+            <option value="recent">Recent</option>
+            <option value="pinned">Friends</option>
+          </select>
+        </div>
       </div>
       <div className="top-right">
         <div className="buttons">
