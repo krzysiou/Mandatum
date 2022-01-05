@@ -1,12 +1,17 @@
-import { NavButton } from "./components/navbutton/NavButton";
+import { NavButton } from "./navbutton/NavButton";
+import { Dropdown } from "./dropdown/Dropdown";
+import { redirect} from './navbarFunc'
+import { useState } from "react";
 import logo from './logo.svg'
 import './NavBar.css';
 
 export function NavBar():JSX.Element {
-  const redirect = (str: string) => {
-    return () => alert("redirecting to " + str);
-  }
+  
+  const [open, setOpen] = useState(false);
 
+  function opened() {
+    return () => setOpen(!open);
+  }
   return (
     <div className="top">
       <div className="top-left">
@@ -21,22 +26,17 @@ export function NavBar():JSX.Element {
           <NavButton label="Recent" onPress={redirect("Recent")}/>
           <NavButton label="Pinned" onPress={redirect("Pinned")}/>
         </div>
-        <div className="dropdown">
-          <select name="cars" id="cars">
-            <option value="login">Log In</option>
-            <option value="about">About</option>
-            <option value="home">Home</option>
-            <option value="friends">Friends</option>
-            <option value="recent">Recent</option>
-            <option value="pinned">Friends</option>
-          </select>
-        </div>
       </div>
       <div className="top-right">
         <div className="buttons">
           <NavButton label="Home"  onPress={redirect("Home")}/>
           <NavButton label="About" onPress={redirect("About")}/>
           <NavButton label="Log in" onPress={redirect("Login")}/>
+        </div>
+        <div className="dropdown-container">
+          <NavButton label="Menu" onPress={opened()} state={open}>
+            <Dropdown/>
+          </NavButton>
         </div>
       </div>
     </div>

@@ -8,9 +8,9 @@ input {
   outline: none;
 }
 
-.dropdown {
+/* .dropdown {
   display: none;
-}
+} */
 
 .top {
   background-color: #091d24;
@@ -72,6 +72,5 @@ input {
 
   .dropdown {
     display: inline;
-    margin-right: 2em;
   }
 }
