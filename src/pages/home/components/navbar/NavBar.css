@@ -14,6 +14,7 @@ input {
   height: 3.8em;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid rgb(63, 63, 63);
 }
 .top-right {
   width: 50%;
@@ -52,9 +53,7 @@ input {
 }
 
 .dropdown-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
 }
 
 @media screen and (max-width: 1120px) {
@@ -72,7 +71,9 @@ input {
     margin-left: 2em;
   }
 
-  .dropdown {
-    display: inline;
+  .dropdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

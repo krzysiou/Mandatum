@@ -26,17 +26,17 @@ export function NavBar():JSX.Element {
           <NavButton label="Recent" onPress={redirect("Recent")}/>
           <NavButton label="Pinned" onPress={redirect("Pinned")}/>
         </div>
+        <div className="dropdown-container">
+          <NavButton label="Menu" onPress={opened()} state={open}>
+            <Dropdown/>
+          </NavButton>
+        </div>
       </div>
       <div className="top-right">
         <div className="buttons">
           <NavButton label="Home"  onPress={redirect("Home")}/>
           <NavButton label="About" onPress={redirect("About")}/>
           <NavButton label="Log in" onPress={redirect("Login")}/>
-        </div>
-        <div className="dropdown-container">
-          <NavButton label="Menu" onPress={opened()} state={open}>
-            <Dropdown/>
-          </NavButton>
         </div>
       </div>
     </div>
