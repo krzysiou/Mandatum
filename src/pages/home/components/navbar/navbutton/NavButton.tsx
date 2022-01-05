@@ -1,8 +1,8 @@
 import "./NavButton.css"
 
 type Props = {
-  state?: boolean,
   label: string,
+  state?: boolean,
   onPress?: () => void,
   children?: JSX.Element
 }

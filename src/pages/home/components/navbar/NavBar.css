@@ -8,10 +8,6 @@ input {
   outline: none;
 }
 
-/* .dropdown {
-  display: none;
-} */
-
 .top {
   background-color: #091d24;
   display: flex;
@@ -53,6 +49,12 @@ input {
   background-color: #040e12;
   border-radius: 5px;
   border: 1px solid rgb(63, 63, 63);
+}
+
+.dropdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 1120px) {
