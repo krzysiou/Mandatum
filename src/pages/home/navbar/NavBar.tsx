@@ -1,7 +1,7 @@
 import { NavButton } from "./navbutton/NavButton";
 import { Dropdown } from "./dropdown/Dropdown";
 import { DropdownHeader } from "./dropdownheader/DropdownHeader";
-import { redirect} from './navbarFunc'
+import { redirect } from '../homeFunc'
 import { useState } from "react";
 import logo from './logo.svg'
 import './NavBar.css';
@@ -23,9 +23,9 @@ export function NavBar():JSX.Element {
           <input type="text" placeholder="Search.." name="search"/>
         </div>
         <div className="buttons">
-          <NavButton label="Friends"  onPress={redirect("Friends")}/>
-          <NavButton label="Recent" onPress={redirect("Recent")}/>
-          <NavButton label="Pinned" onPress={redirect("Pinned")}/>
+          <NavButton label="Friends"  onPress={redirect("friends")}/>
+          <NavButton label="Recent" onPress={redirect("recent")}/>
+          <NavButton label="Pinned" onPress={redirect("pinned")}/>
         </div>
         <div className="dropdown-container">
           <DropdownHeader label="Menu" onPress={opened()} state={open}>
@@ -35,8 +35,9 @@ export function NavBar():JSX.Element {
       </div>
       <div className="top-right">
         <div className="buttons">
-          <NavButton label="Home"  onPress={redirect("Home")}/>
-          <NavButton label="Log in" onPress={redirect("Login")}/>
+          <NavButton label="Home"  onPress={redirect("home")}/>
+          <NavButton label="Log in" onPress={redirect("login")}/>
+          <NavButton label="Register" onPress={redirect("register")}/>
         </div>
       </div>
     </div>
