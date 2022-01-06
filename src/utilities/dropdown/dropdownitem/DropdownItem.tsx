@@ -6,5 +6,5 @@ type Props = {
 }
 
 export function DropdownItem({label, onPress}:Props): JSX.Element {
-  return <a className='menu-item' href="#" onClick={ onPress }>{ label }</a>
+  return <a className='menu-item' onClick={ onPress }>{ label }</a>
  }

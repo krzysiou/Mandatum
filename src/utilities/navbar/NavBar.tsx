@@ -1,16 +1,18 @@
 import { NavButton } from "./navbutton/NavButton";
-import { Dropdown } from "./dropdown/Dropdown";
-import { DropdownHeader } from "./dropdownheader/DropdownHeader";
-import { redirect } from '../homeFunc'
+import { Dropdown } from "../dropdown/Dropdown";
+import { DropdownHeader } from "../dropdown/dropdownheader/DropdownHeader";
+import { DropdownItem } from '../dropdown/dropdownitem/DropdownItem';
+import { redirect } from '../../pages/home/homeFunc'
 import { useState } from "react";
 import logo from './logo.svg'
 import './NavBar.css';
+
 
 export function NavBar():JSX.Element {
   
   const [open, setOpen] = useState(false);
 
-  function opened() {
+  function changeOpen() {
     return () => setOpen(!open);
   }
   return (
@@ -28,8 +30,17 @@ export function NavBar():JSX.Element {
           <NavButton label="Pinned" onPress={redirect("pinned")}/>
         </div>
         <div className="dropdown-container">
-          <DropdownHeader label="Menu" onPress={opened()} state={open}>
-            <Dropdown/>
+          <DropdownHeader label="Menu" onPress={changeOpen()} state={open}>
+            <Dropdown>
+              <>
+              <DropdownItem label="Home" onPress={redirect('home')} />
+              <DropdownItem label="Log In" onPress={redirect('log in')} />
+              <DropdownItem label="Register" onPress={redirect('register')} />
+              <DropdownItem label="Friends" onPress={redirect('friends')} />
+              <DropdownItem label="Recent" onPress={redirect('recent')} />
+              <DropdownItem label="Pinned" onPress={redirect('pinned')} />
+              </>
+            </Dropdown>
           </DropdownHeader>
         </div>
       </div>
