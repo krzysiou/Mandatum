@@ -8,5 +8,9 @@ type Props = {
 }
 
 export function DropdownHeader({state, label, onPress, children}:Props): JSX.Element {
-  return <a className="menu-header" style={ {borderBottom: state ? '1px solid #1691a1' : '', padding: state ? '0 1.5em' : '' } } onClick={ onPress }>{ label } { state && children }</a>
+  return (
+    <div className="dropdown-container">
+      <a className="menu-header" style={ {borderBottom: state ? '1px solid #1691a1' : '', padding: state ? '0 1.5em' : '' } } onClick={ onPress }>{ label } { state && children }</a>
+    </div>
+  );
 }

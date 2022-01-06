@@ -1,6 +1,3 @@
-import { DropdownItem } from './dropdownitem/DropdownItem';
-import { redirect } from '../../pages/home/homeFunc'
-
 import './Dropdown.css';
 
 type Props = {

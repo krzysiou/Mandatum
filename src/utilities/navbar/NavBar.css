@@ -8,7 +8,7 @@ input {
   outline: none;
 }
 
-.top {
+.navbar {
   width: 100%;
   background-color: #091d24;
   display: flex;
@@ -18,32 +18,6 @@ input {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid rgb(63, 63, 63);
-}
-.top-right {
-  width: 50%;
-  margin-right: 8em;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.top-left {
-  margin-left: 8em;
-  width: 40%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.mini-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 4em;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .search {
@@ -55,39 +29,9 @@ input {
   border: 1px solid rgb(63, 63, 63);
 }
 
-.dropdown-container {
-  display: none;
-}
-
 @media screen and (max-width: 1120px) {
-  .buttons {
-    display: none;
-  }
-
-  .top-right {
-    display: none;
-  }
-
-  .top-left {
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
-    justify-content: space-evenly;
-  }
-
-  .mini-logo {
-    margin-right: 5px;
-  }
-
   .search {
     margin: 5px;
-  }
-
-  .dropdown-container {
-    width: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 

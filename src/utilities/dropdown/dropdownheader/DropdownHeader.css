@@ -12,3 +12,17 @@
 .menu-header:hover {
   color: rgb(204, 204, 204);
 }
+
+.dropdown-container {
+  display: none;
+}
+
+@media screen and (max-width: 1120px) {
+
+  .dropdown-container {
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

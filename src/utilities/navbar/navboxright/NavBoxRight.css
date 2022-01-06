@@ -1,0 +1,15 @@
+.nav-box-right {
+  width: 50%;
+  margin-right: 4em;
+  margin-left: 4em;
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 1120px) {
+
+  .nav-box-right {
+    display: none;
+  }
+}
