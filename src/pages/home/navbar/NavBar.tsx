@@ -36,7 +36,6 @@ export function NavBar():JSX.Element {
       <div className="top-right">
         <div className="buttons">
           <NavButton label="Home"  onPress={redirect("Home")}/>
-          <NavButton label="About" onPress={redirect("About")}/>
           <NavButton label="Log in" onPress={redirect("Login")}/>
         </div>
       </div>

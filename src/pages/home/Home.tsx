@@ -1,6 +1,5 @@
 import { NavBar } from "./navbar/NavBar";
 import { Header } from "./header/Header";
-
 import './Home.css';
 
 export function Home():JSX.Element {
