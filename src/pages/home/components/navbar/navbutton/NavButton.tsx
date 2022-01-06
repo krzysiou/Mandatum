@@ -8,5 +8,5 @@ type Props = {
 }
 
 export function NavButton({state, label, onPress, children}:Props): JSX.Element {
-  return <a onClick={ onPress }>{ label } { state && children }</a>
+  return <a className='nav-button' onClick={ onPress }>{ label } { state && children }</a>
 }

@@ -1,16 +1,15 @@
-.nav-button {
+.menu-header {
   position: relative;
   cursor: pointer;
   text-decoration: none;
   font-size: inherit;
+  border-bottom: 1px solid #1691a1;
   margin: 1em 1em;
   font-family: inherit;
   font-weight: bold;
-  border-bottom: 1px solid #1691a1;
-  transition: 50ms;
+  transition: 100ms;
 }
 
-.nav-button:hover {
+.menu-header:hover {
   color: rgb(204, 204, 204);
-  border-color: #125b64;
 }

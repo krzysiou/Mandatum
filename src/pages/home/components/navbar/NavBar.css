@@ -66,12 +66,22 @@ input {
   }
 
   .top-left {
+    margin-left: 1em;
+    margin-right: 1em;
     width: 100%;
     justify-content: space-evenly;
-    margin-left: 2em;
+  }
+
+  .mini-logo {
+    margin-right: 5px;
+  }
+
+  .search {
+    margin: 5px;
   }
 
   .dropdown-container {
+    width: 5%;
     display: flex;
     justify-content: center;
     align-items: center;

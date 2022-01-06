@@ -1,5 +1,6 @@
 import { NavButton } from "./navbutton/NavButton";
 import { Dropdown } from "./dropdown/Dropdown";
+import { DropdownHeader } from "./dropdown/DropdownHeader";
 import { redirect} from './navbarFunc'
 import { useState } from "react";
 import logo from './logo.svg'
@@ -27,9 +28,9 @@ export function NavBar():JSX.Element {
           <NavButton label="Pinned" onPress={redirect("Pinned")}/>
         </div>
         <div className="dropdown-container">
-          <NavButton label="Menu" onPress={opened()} state={open}>
+          <DropdownHeader label="Menu" onPress={opened()} state={open}>
             <Dropdown/>
-          </NavButton>
+          </DropdownHeader>
         </div>
       </div>
       <div className="top-right">
