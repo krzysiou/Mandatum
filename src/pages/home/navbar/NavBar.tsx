@@ -1,6 +1,6 @@
 import { NavButton } from "./navbutton/NavButton";
 import { Dropdown } from "./dropdown/Dropdown";
-import { DropdownHeader } from "./dropdown/DropdownHeader";
+import { DropdownHeader } from "./dropdownheader/DropdownHeader";
 import { redirect} from './navbarFunc'
 import { useState } from "react";
 import logo from './logo.svg'

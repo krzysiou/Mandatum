@@ -1,4 +1,4 @@
-import { DropdownItem } from './DropdownItem';
+import { DropdownItem } from './dropdownitem/DropdownItem';
 import { redirect } from '../navbarFunc'
 
 import './Dropdown.css';
