@@ -42,7 +42,7 @@ export function Login():JSX.Element {
                   <Dropdown>
                     <>
                     <DropdownItem label="Home" onPress={redirect('home')} />
-                    <DropdownItem label="Register" onPress={redirect('register')} />
+                    <DropdownItem label="Sign In" onPress={redirect('register')} />
                     <DropdownItem label="Friends" onPress={redirect('friends')} />
                     <DropdownItem label="Recent" onPress={redirect('recent')} />
                     <DropdownItem label="Pinned" onPress={redirect('pinned')} />
@@ -55,7 +55,7 @@ export function Login():JSX.Element {
           <NavBoxRight>
             <>
               <NavButton label="Home"  onPress={redirect("home")}/>
-              <NavButton label="Register" onPress={redirect("register")}/>
+              <NavButton label="Sign In" onPress={redirect("register")}/>
             </>
           </NavBoxRight>
         </>

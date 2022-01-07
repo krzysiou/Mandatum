@@ -8,4 +8,10 @@ function submitLogin() {
   return () => alert('submitted login');
 }
 
-export {redirect, submitLogin};
+//submit register information and send request
+function submitRegister() {
+  return () => alert('submitted register');
+}
+
+
+export {redirect, submitLogin, submitRegister};

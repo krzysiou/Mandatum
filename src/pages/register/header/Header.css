@@ -3,7 +3,7 @@
   border-bottom: 1px solid #1691a1;
 }
 
-.login-header {
+.register-header {
   margin-top: 7em;
   width: 100%;
   display: flex;
@@ -11,7 +11,7 @@
   justify-content: center;
 }
 
-.main-login-body {
+.main-register-body {
   padding: 2em 3.5em;
   display: flex;
   border: 1px solid rgb(63, 63, 63);
@@ -23,19 +23,21 @@
   align-items: center;
 }
 
-.side-login-body {
+.side-register-body {
   margin-left: 1em;
   display: none;
 }
 
-.login-box {
-  margin-top: 1em;
+.register-box {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-.login-box-right {
+.register-box-right {
   width: 100%;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -45,18 +47,18 @@
   justify-content: center;
 }
 
+.button-box {
+  width: 14em;
+  display: flex;
+  justify-content: space-between;
+}
+
 .button-box-right {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items:flex-start;
-}
-
-.button-box {
-  width: 14em;
-  display: flex;
-  justify-content: space-between;
 }
 
 .button {
@@ -81,7 +83,6 @@
   background-color: #116d79;
 }
 
-
 .register-redirect {
   margin-top: 1em;
   font-size: 12px;
@@ -100,15 +101,11 @@
     margin-top: 0.4em;
   }
 
-  .login-header {
-    margin-top: 7em;
-  }
-
-  .login-box {
+  .register-box {
     margin-top: 0.1em;
   }
 
-  .main-login-body {
+  .main-register-body {
     padding: 1em 4em;
     background-color: #091d24;
   }
@@ -125,8 +122,12 @@
     display: none;
   }
 
-  .side-login-body {
+  .side-register-body {
     display: flex;
+  }
+
+  .register-header {
+    margin-top: 5em;
   }
 }
 
@@ -137,7 +138,7 @@
     justify-content: space-between;
   }
 
-  .login-box {
+  .register-box {
     margin-top: 1em;
   }
 
@@ -151,11 +152,8 @@
     width: 5em;
   }
 
-  .login-header {
-    margin-top: 9em;
-  }
-
-  .main-login-body {
+  .main-register-body {
+    margin-top: 2em;
     padding: 1em 2.5em;
   }
 
@@ -168,7 +166,11 @@
     display: flex;
   }
 
-  .side-login-body {
+  .side-register-body {
     display: none;
+  }
+
+  .register-header {
+    margin-top: 5em;
   }
 }

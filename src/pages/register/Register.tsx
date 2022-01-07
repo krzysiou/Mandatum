@@ -12,7 +12,9 @@ import { SearchBar } from "../../utilities/components/navbar/searchbar/SearchBar
 import { redirect } from "../../utilities/functions/globalFunctions"
 import { useState } from "react";
 
-export function Home(): JSX.Element {
+import './Register.css';
+
+export function Register():JSX.Element {
 
   const [open, setOpen] = useState(false);
 
@@ -21,15 +23,15 @@ export function Home(): JSX.Element {
   }
 
   return (
-    <div className="home">
+    <div className="register">
       <NavBar>
         <>
           <NavBoxLeft>
             <>
-            <div className="left-left">
+              <div className="left-left">
                 <Logo/>
               </div>
-              <div className="left-mid1">
+              <div className="left-mid">
                 <SearchBar placeholder="Search.." name="search"/>
               </div>
               <NavButton label="Friends"  onPress={redirect("friends")}/>
@@ -39,8 +41,8 @@ export function Home(): JSX.Element {
                 <DropdownHeader label="Menu" onPress={changeOpen()} state={open}>
                   <Dropdown>
                     <>
+                    <DropdownItem label="Home" onPress={redirect('home')} />
                     <DropdownItem label="Log In" onPress={redirect('login')} />
-                    <DropdownItem label="Sign In" onPress={redirect('register')} />
                     <DropdownItem label="Friends" onPress={redirect('friends')} />
                     <DropdownItem label="Recent" onPress={redirect('recent')} />
                     <DropdownItem label="Pinned" onPress={redirect('pinned')} />
@@ -52,8 +54,8 @@ export function Home(): JSX.Element {
           </NavBoxLeft>
           <NavBoxRight>
             <>
-              <NavButton label="Log in" onPress={redirect("login")}/>
-              <NavButton label="Sign In" onPress={redirect("register")}/>
+              <NavButton label="Home"  onPress={redirect("home")}/>
+              <NavButton label="Log In" onPress={redirect("login")}/>
             </>
           </NavBoxRight>
         </>
@@ -61,5 +63,5 @@ export function Home(): JSX.Element {
       <Header/>
       <Footer/>
     </div>
-  )
+  );
 }
