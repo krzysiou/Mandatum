@@ -2,7 +2,7 @@ import "./SearchBar.css"
 
 type Props = {
   placeholder: string,
-  name: string
+  name: string,
 }
 
 export function SearchBar({placeholder, name}:Props): JSX.Element {

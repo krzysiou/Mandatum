@@ -2,11 +2,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 4em;
-}
-
-@media screen and (max-width: 1120px) {
-  .icon {
-    margin-right: 5px;
-  }
+  width: 2.5em;
 }

@@ -26,22 +26,28 @@ export function Home(): JSX.Element {
         <>
           <NavBoxLeft>
             <>
-              <Logo/>
-              <SearchBar placeholder="Search.." name="search"/>
+            <div className="left-left">
+                <Logo/>
+              </div>
+              <div className="left-mid">
+                <SearchBar placeholder="Search.." name="search"/>
+              </div>
               <NavButton label="Friends"  onPress={redirect("friends")}/>
               <NavButton label="Recent" onPress={redirect("recent")}/>
               <NavButton label="Pinned" onPress={redirect("pinned")}/>
-              <DropdownHeader label="Menu" onPress={changeOpen()} state={open}>
-                <Dropdown>
-                  <>
-                  <DropdownItem label="Log In" onPress={redirect('login')} />
-                  <DropdownItem label="Register" onPress={redirect('register')} />
-                  <DropdownItem label="Friends" onPress={redirect('friends')} />
-                  <DropdownItem label="Recent" onPress={redirect('recent')} />
-                  <DropdownItem label="Pinned" onPress={redirect('pinned')} />
-                  </>
-                </Dropdown>
-              </DropdownHeader>
+              <div className="left-right">
+                <DropdownHeader label="Menu" onPress={changeOpen()} state={open}>
+                  <Dropdown>
+                    <>
+                    <DropdownItem label="Log In" onPress={redirect('login')} />
+                    <DropdownItem label="Register" onPress={redirect('register')} />
+                    <DropdownItem label="Friends" onPress={redirect('friends')} />
+                    <DropdownItem label="Recent" onPress={redirect('recent')} />
+                    <DropdownItem label="Pinned" onPress={redirect('pinned')} />
+                    </>
+                  </Dropdown>
+                </DropdownHeader>
+              </div>
             </>
           </NavBoxLeft>
           <NavBoxRight>

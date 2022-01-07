@@ -1,12 +1,13 @@
 import { SearchBar } from "../../../utilities/components/navbar/searchbar/SearchBar";
-import { redirect } from "../../../utilities/functions/globalFunctions";
+import { redirect, submitLogin } from "../../../utilities/functions/globalFunctions";
+import { DropdownItem } from "../../../utilities/components/dropdown/dropdownitem/DropdownItem";
 import "./Header.css"
 
 export function Header():JSX.Element {
   return (
     <div className="login-header">
       <div className="main-login-body">
-        <h3>Log in</h3>
+        <h3 className="header-text">Log in</h3>
         <div className="login-box">
           <p className="input-text">Username</p>
           <SearchBar placeholder="username.." name="username"/>
@@ -16,7 +17,14 @@ export function Header():JSX.Element {
           <SearchBar placeholder="password.." name="password"/>
         </div>
         <div className="login-box">
-          <a className="register-redirect" onClick={redirect('register')}>Dont have an account?</a>
+          <div className="button-box">
+            <div className="button">
+              <DropdownItem label='submit' onPress={submitLogin()}/>
+            </div>
+            <div className="button">
+              <DropdownItem label='create account' onPress={redirect('register')}/>
+            </div>
+          </div>
         </div>
       </div>
     </div>
