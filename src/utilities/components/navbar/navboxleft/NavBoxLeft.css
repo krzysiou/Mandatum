@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 900px) {
   .nav-box-left {
     margin-left: 0;
     margin-right: 0;

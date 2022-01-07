@@ -29,7 +29,7 @@ export function Home(): JSX.Element {
             <div className="left-left">
                 <Logo/>
               </div>
-              <div className="left-mid">
+              <div className="left-mid1">
                 <SearchBar placeholder="Search.." name="search"/>
               </div>
               <NavButton label="Friends"  onPress={redirect("friends")}/>

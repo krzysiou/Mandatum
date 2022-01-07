@@ -60,7 +60,7 @@
   border-bottom: 1px solid #1691a1;
 }
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 900px) {
   .input-text {
     margin-top: 0.4em;
   }
