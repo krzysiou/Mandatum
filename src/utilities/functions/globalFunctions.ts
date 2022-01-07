@@ -1,6 +1,6 @@
 //redirect to url
 function redirect(str: string) {
-  return () => alert("redirecting to " + str);
+  return () => window.location.href = str;
 }
 
 export {redirect};

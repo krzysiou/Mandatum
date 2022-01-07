@@ -1,10 +1,10 @@
-import { redirect } from '../homeFunc'
+import { redirect } from '../../../utilities/functions/globalFunctions'
 import logo from './logo.svg'
 import "./Header.css"
 
 export function Header(): JSX.Element {
   return (
-    <div className="header-container">
+    <div className="home-header">
       <div className="main">
         <div className="logo">
           <img src={logo} alt="logo"/>

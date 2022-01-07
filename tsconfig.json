@@ -1,7 +1,7 @@
 {
   "include": [
     "./src/**/*"
-, "src/utilities/footer", "hometemp"  ],
+, "src/utilities/components/footer", "hometemp"  ],
   "compilerOptions": {
     "strict": true,
     "esModuleInterop": true,

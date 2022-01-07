@@ -8,19 +8,7 @@ input {
   outline: none;
 }
 
-.navbar {
-  width: 100%;
-  background-color: #091d24;
-  display: flex;
-  position: fixed;
-  top: 0;
-  height: 3.8em;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid rgb(63, 63, 63);
-}
-
-.search {
+.search-bar {
   padding: 0.15em 0.3em;
   width: 14em;
   margin-right: 3em;
@@ -30,7 +18,7 @@ input {
 }
 
 @media screen and (max-width: 1120px) {
-  .search {
+  .search-bar {
     margin: 5px;
   }
 }
@@ -41,7 +29,7 @@ input {
     margin-left: -1em;
   }
 
-  .search {
+  .search-bar {
     width: 7em;
     margin-left: -1em;
   }

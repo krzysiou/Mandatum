@@ -1,7 +1,6 @@
 .nav-box-right {
   width: 50%;
-  margin-right: 4em;
-  margin-left: 4em;
+  margin-right: 8em;
   justify-content: flex-end;
   display: flex;
   align-items: center;
