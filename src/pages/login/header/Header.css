@@ -1,3 +1,61 @@
-.login-container {
-  color: red;
+h3 {
+  margin: 0 auto;
+  border-bottom: 1px solid #1691a1;
+}
+
+.login-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-login-body {
+  margin-top: 5em;
+  padding: 2em 3.5em;
+  display: flex;
+  border: 1px solid rgb(63, 63, 63);
+  border-radius: 5px;
+  width: 10em;
+  background-color: #091d24;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-redirect {
+  margin-top: 1em;
+  font-size: 12px;
+}
+
+.input-text {
+  font-size: 16px;
+  margin-top: 1em;
+  margin-bottom: 0;
+  width: 8em;
+  border-bottom: 1px solid #1691a1;
+}
+
+@media screen and (max-width: 450px) {
+  .input-text {
+    font-size: 14px;
+    margin-top: 0;
+    width: 5em;
+  }
+
+  .main-login-body {
+    padding: 1em 2em;
+  }
+
+  .register-redirect {
+    margin-top: 0.5em;
+    font-size: 10px;
+  }
 }

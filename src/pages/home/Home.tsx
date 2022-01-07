@@ -27,7 +27,7 @@ export function Home(): JSX.Element {
           <NavBoxLeft>
             <>
               <Logo/>
-              <SearchBar/>
+              <SearchBar placeholder="Search.." name="search"/>
               <NavButton label="Friends"  onPress={redirect("friends")}/>
               <NavButton label="Recent" onPress={redirect("recent")}/>
               <NavButton label="Pinned" onPress={redirect("pinned")}/>

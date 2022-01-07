@@ -11,26 +11,18 @@ input {
 .search-bar {
   padding: 0.15em 0.3em;
   width: 14em;
-  margin-right: 3em;
   background-color: #040e12;
   border-radius: 5px;
   border: 1px solid rgb(63, 63, 63);
 }
 
-@media screen and (max-width: 1120px) {
-  .search-bar {
-    margin: 5px;
-  }
-}
 
 @media screen and (max-width: 450px) {
   input {
-    width: 6em;
-    margin-left: -1em;
+    width: 7em;
   }
 
   .search-bar {
-    width: 7em;
-    margin-left: -1em;
+    width: 8em;
   }
 }

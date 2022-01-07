@@ -1,9 +1,14 @@
 import "./SearchBar.css"
 
-export function SearchBar(): JSX.Element {
+type Props = {
+  placeholder: string,
+  name: string
+}
+
+export function SearchBar({placeholder, name}:Props): JSX.Element {
   return (
     <div className="search-bar">
-      <input type="text" placeholder="Search.." name="search"/>
+      <input type="text" placeholder={placeholder} name={name}/>
     </div>
   );
 }
