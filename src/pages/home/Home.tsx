@@ -15,7 +15,7 @@ import { useState } from "react";
 export function Home(): JSX.Element {
 
   const [open, setOpen] = useState(false);
-
+  //toggle open
   function changeOpen() {
     return () => setOpen(!open);
   }
