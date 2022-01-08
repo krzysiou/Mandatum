@@ -2,6 +2,8 @@ import { redirect } from '../../../utilities/functions/globalFunctions'
 import logo from './logo.svg'
 import "./Header.css"
 
+//lala
+//qwee
 export function Header(): JSX.Element {
   return (
     <div className="home-header">
