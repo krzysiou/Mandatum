@@ -14,8 +14,6 @@ import { useState } from "react";
 
 export function Home(): JSX.Element {
 
-
-  //qwe
   const [open, setOpen] = useState(false);
   function changeOpen() {
     return () => setOpen(!open);
