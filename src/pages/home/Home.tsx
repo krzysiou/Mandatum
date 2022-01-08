@@ -13,9 +13,8 @@ import { redirect } from "../../utilities/functions/globalFunctions"
 import { useState } from "react";
 
 export function Home(): JSX.Element {
-
+  //comment
   const [open, setOpen] = useState(false);
-  //toggle open
   function changeOpen() {
     return () => setOpen(!open);
   }
