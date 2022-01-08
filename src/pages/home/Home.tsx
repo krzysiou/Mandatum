@@ -13,7 +13,7 @@ import { redirect } from "../../utilities/functions/globalFunctions"
 import { useState } from "react";
 
 export function Home(): JSX.Element {
-  //commqwe
+
   const [open, setOpen] = useState(false);
   function changeOpen() {
     return () => setOpen(!open);
