@@ -7,10 +7,7 @@ import { Register } from "./pages/register/Register";
 
 import './App.css';
 
-//comment test1
 
-
-//comment test 2
 const rootElement = document.getElementById("root");
 render(
   <div className="App">
