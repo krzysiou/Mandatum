@@ -1,0 +1,42 @@
+
+.not-logged {
+  margin-top: 10rem;
+}
+
+.oops-top {
+  margin-left: 2rem;
+  margin-right: 2rem
+}
+
+.oops-header {
+  font-size: 36px;
+}
+
+.oops-bot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.oops-header-message-h {
+  display: none;
+  font-size: 12px;
+}
+
+@media screen and (orientation: landscape) and (max-height: 550px) {
+  .not-logged {
+    margin-top: 6rem;
+  }
+  
+  .oops-header {
+    font-size: 28px;
+  }
+  
+  .oops-header-message {
+    display: none;
+  }
+
+  .oops-header-message-h {
+    display: block;
+  }
+}

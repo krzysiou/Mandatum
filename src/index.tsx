@@ -4,6 +4,7 @@ import { Blank } from "./pages/blank/blank";
 import { Home } from "./pages/home/Home";
 import { Login } from "./pages/login/Login";
 import { Register } from "./pages/register/Register";
+import { Friends } from "./pages/friends/Friends";
 
 import './App.css';
 
@@ -17,6 +18,7 @@ render(
         <Route path="/home" element={<Home/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register/>} />
+        <Route path="/:id/friends" element={<Friends/>} />
       </Routes>
     </BrowserRouter>
   </div>,
