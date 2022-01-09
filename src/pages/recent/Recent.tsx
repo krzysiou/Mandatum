@@ -1,13 +1,13 @@
 import { NavBar } from "../../utilities/components/navbar/NavBar";
 import { Footer } from "../../utilities/components/footer/Footer"
-import { Header } from "./header/Header"
+import { NotLogged } from "../../utilities/components/notlogged/NotLogged"
 
-export function Home(): JSX.Element {
-
+export function Recent(): JSX.Element {
+  
   return (
-    <div className="home">
+    <div className="recent">
       <NavBar/>
-      <Header/>
+      <NotLogged label="Recent"/>
       <Footer/>
     </div>
   )

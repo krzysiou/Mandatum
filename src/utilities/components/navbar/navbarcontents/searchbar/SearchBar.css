@@ -16,7 +16,7 @@ input {
   border: 1px solid rgb(63, 63, 63);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 980px) {
   input {
     text-align: center;
   }

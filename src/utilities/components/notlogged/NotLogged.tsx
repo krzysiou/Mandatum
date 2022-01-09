@@ -13,7 +13,7 @@ export function NotLogged( { label } : Props ): JSX.Element {
       <div className='oops-top'>
         <h1 className='oops-header'>Oops . . .</h1>
         <p className='oops-header-message'>Seems like you are not logged in.<br/>To proceed to <b>{ label }</b>, first <b>Log In</b> by hitting the button below.</p>
-        <p className='oops-header-message-h'>You are not logged in. Proceed to <b>{ label } </b> by logging on.</p>
+        <p className='oops-header-message-h'>You are not logged in. Proceed to <b>{ label } </b> by logging in.</p>
       </div>
       <div className='oops-bot'>
         <Button width="8rem" label='log in' onPress={redirect('login')} />

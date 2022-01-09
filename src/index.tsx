@@ -5,6 +5,8 @@ import { Home } from "./pages/home/Home";
 import { Login } from "./pages/login/Login";
 import { Register } from "./pages/register/Register";
 import { Friends } from "./pages/friends/Friends";
+import { Recent } from "./pages/recent/Recent";
+import { Pinned } from "./pages/pinned/Pinned";
 
 import './App.css';
 
@@ -14,11 +16,13 @@ render(
   <div className="App">
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Blank/>} />
-        <Route path="/home" element={<Home/>} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/register" element={<Register/>} />
-        <Route path="/:id/friends" element={<Friends/>} />
+        <Route path="/" element={<Blank/>}/>
+        <Route path="/home" element={<Home/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/register" element={<Register/>}/>
+        <Route path="/friends" element={<Friends/>}/>
+        <Route path="/pinned" element={<Pinned/>}/>
+        <Route path="/recent" element={<Recent/>}/>
       </Routes>
     </BrowserRouter>
   </div>,

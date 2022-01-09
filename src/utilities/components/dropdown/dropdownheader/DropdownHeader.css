@@ -4,7 +4,7 @@
   text-decoration: none;
   font-size: inherit;
   border-bottom: 1px solid #1691a1;
-  margin: 1em 1em;
+  margin: 1em;
   width: 2.5em;
   font-family: inherit;
   font-weight: bold;
@@ -18,12 +18,13 @@
   display: none;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 980px) {
 
   .dropdown-container {
-    width: 5%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
   }
 }

@@ -1,11 +1,19 @@
-.navbar {
-  width: 100%;
-  background-color: #091d24;
-  display: flex;
-  position: fixed;
-  top: 0;
-  height: 3.8em;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid rgb(63, 63, 63);
+@media screen and (max-width: 980px) {
+  .little1, .little2, .little3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .little1 {
+    width: 30%;
+  }
+
+  .little2 {
+    width: 40%;
+  }
+
+  .little3 {
+    width: 30%;
+  }
 }

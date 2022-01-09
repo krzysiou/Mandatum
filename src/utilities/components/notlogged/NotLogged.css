@@ -20,7 +20,7 @@
 
 .oops-header-message-h {
   display: none;
-  font-size: 12px;
+  font-size: 8px;
 }
 
 @media screen and (orientation: landscape) and (max-height: 550px) {

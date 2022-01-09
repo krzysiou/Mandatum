@@ -15,7 +15,7 @@
   border-color: #125b64;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 980px) {
   .nav-button {
     display: none;
   }

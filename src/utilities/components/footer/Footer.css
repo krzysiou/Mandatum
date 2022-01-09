@@ -37,7 +37,7 @@
   color: rgb(111, 111, 111);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 980px) {
   .footer-link{
     font-size: 10px;
   }
