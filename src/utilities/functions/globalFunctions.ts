@@ -13,4 +13,8 @@ function submitRegister() {
   return () => alert('submitted register');
 }
 
-export {redirect, submitLogin, submitRegister};
+function setLogin(func: (state: boolean)=>void, logged: boolean){
+  return () => func(logged);
+}
+
+export {redirect, submitLogin, submitRegister, setLogin};
