@@ -10,21 +10,20 @@ import { Pinned } from "./pages/pinned/Pinned";
 
 import './App.css';
 
-
 const rootElement = document.getElementById("root");
-render(
-  <div className="App">
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Blank/>}/>
-        <Route path="/home" element={<Home/>}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/register" element={<Register/>}/>
-        <Route path="/friends" element={<Friends/>}/>
-        <Route path="/pinned" element={<Pinned/>}/>
-        <Route path="/recent" element={<Recent/>}/>
-      </Routes>
-    </BrowserRouter>
-  </div>,
-  rootElement
+  render(
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Blank/>}/>
+          <Route path="/home" element={<Home/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/register" element={<Register/>}/>
+          <Route path="/friends" element={<Friends/>}/>
+          <Route path="/pinned" element={<Pinned/>}/>
+          <Route path="/recent" element={<Recent/>}/>
+        </Routes>
+      </BrowserRouter>
+    </div>,
+    rootElement
 );

@@ -7,12 +7,17 @@ import { Dropdown } from "../dropdown/Dropdown"
 import { DropdownItem } from "../dropdown/dropdownitem/DropdownItem"
 import { Logo } from "./navbarcontents/logo/Logo"
 import { SearchBar } from "./navbarcontents/searchbar/SearchBar"
+import { useState } from "react"
 import { redirect } from "../../functions/globalFunctions"
-import { useState } from "react";
 
 import './NavBar.css'
 
-export function NavBar(): JSX.Element {
+type Props = {
+  logged: boolean,
+  logOut: () => void
+}
+
+export function NavBar({logged, logOut}:Props): JSX.Element {
 
   const [open, setOpen] = useState(false);
   function changeOpen() {
@@ -39,8 +44,9 @@ export function NavBar(): JSX.Element {
                   <Dropdown>
                     <>
                     <DropdownItem label="Home" onPress={redirect('home')} />
-                    <DropdownItem label="Log In" onPress={redirect('login')} />
-                    <DropdownItem label="Sign In" onPress={redirect('register')} />
+                    { logged ? null : <DropdownItem label="Log In" onPress={redirect('login')} />}
+                    { logged ? null : <DropdownItem label="Sign In" onPress={redirect('register')} />}
+                    { logged ? <DropdownItem label="Log out" onPress={logOut} /> : null }
                     <DropdownItem label="Friends" onPress={redirect('friends')} />
                     <DropdownItem label="Recent" onPress={redirect('recent')} />
                     <DropdownItem label="Pinned" onPress={redirect('pinned')} />
@@ -53,8 +59,9 @@ export function NavBar(): JSX.Element {
           <NavBoxRight>
             <>
               <NavButton label="Home" onPress={redirect("home")}/>
-              <NavButton label="Log in" onPress={redirect("login")}/>
-              <NavButton label="Sign In" onPress={redirect("register")}/>
+              { logged ? null : <NavButton label="Log In" onPress={redirect('login')} />}
+              { logged ? null : <NavButton label="Sign In" onPress={redirect('register')} />}
+              { logged ? <NavButton label="Log out" onPress={logOut} /> : null }
             </>
           </NavBoxRight>
         </>

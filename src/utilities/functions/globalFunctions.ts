@@ -13,5 +13,4 @@ function submitRegister() {
   return () => alert('submitted register');
 }
 
-
 export {redirect, submitLogin, submitRegister};

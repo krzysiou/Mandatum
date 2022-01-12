@@ -1,6 +1,6 @@
 import { Button } from "../../../utilities/components/button/Button";
 import { SearchBar } from "../../../utilities/components/navbar/navbarcontents/searchbar/SearchBar";
-import { redirect, submitLogin, submitRegister } from "../../../utilities/functions/globalFunctions";
+import { redirect, submitRegister } from "../../../utilities/functions/globalFunctions";
 import { DropdownItem } from "../../../utilities/components/dropdown/dropdownitem/DropdownItem";
 import "./Header.css"
 
