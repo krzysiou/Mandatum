@@ -1,7 +1,7 @@
 import './Header.css'
 import { SearchBar } from '../../../utilities/components/navbar/navbarcontents/searchbar/SearchBar'
 import { Button } from '../../../utilities/components/button/Button'
-import { addFriend, editProfilePicture, editProfileUsername } from '../../../utilities/functions/globalFunctions'
+import { addFriend, editProfile} from '../../../utilities/functions/globalFunctions'
 
 import defaultpicture from './default.png'
 
@@ -19,7 +19,7 @@ export function Header(): JSX.Element {
           </div>
           <p className='username'>{User.username}</p>
         </div>
-        <Button label="edit" width="4rem" onPress={editProfileUsername()}/>
+        <Button label="edit" width="4rem" onPress={editProfile()}/>
       </div>
       <div className='friend-box box'>
         <div className='search-bar-name'>

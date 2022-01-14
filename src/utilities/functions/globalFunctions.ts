@@ -19,11 +19,6 @@ export function addFriend(name: string) {
 }
 
 //edits profile picture
-export function editProfilePicture(){
-  return () => alert('editting profile picture');
-}
-
-//edits profile username
-export function editProfileUsername(){
-  return () => alert('editting profile username');
+export function editProfile(){
+  return () => alert('editting profile');
 }
