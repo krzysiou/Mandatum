@@ -12,3 +12,18 @@ export function submitLogin() {
 export function submitRegister() {
   return () => alert('submitted register');
 }
+
+//add friend by name
+export function addFriend(name: string) {
+  return () => alert("adding: " + name);
+}
+
+//edits profile picture
+export function editProfilePicture(){
+  return () => alert('editting profile picture');
+}
+
+//edits profile username
+export function editProfileUsername(){
+  return () => alert('editting profile username');
+}
