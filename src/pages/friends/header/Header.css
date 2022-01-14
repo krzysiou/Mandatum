@@ -51,7 +51,7 @@
   margin-right: 1rem;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 720px) {
   .friends-header{
     flex-direction: column;
   }
