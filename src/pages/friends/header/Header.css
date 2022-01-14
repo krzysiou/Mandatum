@@ -51,6 +51,10 @@
   margin-right: 1rem;
 }
 
+.search-bar-name {
+  margin-bottom: 0.5rem;
+}
+
 @media screen and (max-width: 720px) {
   .friends-header{
     flex-direction: column;
