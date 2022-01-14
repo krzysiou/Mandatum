@@ -35,14 +35,16 @@
 
 .account-box {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.profile-name-box {
+.profile {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  margin-bottom: 1rem;
 }
 
 .username {
@@ -58,12 +60,6 @@
 @media screen and (max-width: 720px) {
   .friends-header{
     flex-direction: column;
-  }
-
-  .profile-name-box {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 
   .profile-picture-box {

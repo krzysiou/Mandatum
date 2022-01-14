@@ -13,16 +13,13 @@ export function Header(): JSX.Element {
   return (
     <div className="friends-header">
       <div className='account-box box'>
-        <div className='profile-picture-box'>
-          <img src={defaultpicture} alt="profile picture" width="72px"/>
-          <div className='picture-button'>
-            <Button label="edit" width="6rem" onPress={editProfilePicture()}/>
+        <div className='profile'>
+          <div className='profile-picture-box'>
+            <img src={defaultpicture} alt="profile picture" width="72px"/>
           </div>
-        </div>
-        <div className='profile-name-box'>
           <p className='username'>{User.username}</p>
-          <Button label="edit" width="4rem" onPress={editProfileUsername()}/>
         </div>
+        <Button label="edit" width="4rem" onPress={editProfileUsername()}/>
       </div>
       <div className='friend-box box'>
         <div className='search-bar-name'>
