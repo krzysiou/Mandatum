@@ -10,8 +10,6 @@
 .button-component {
   width: 100%;
   display: flex;
-  padding-left: 1em;
-  padding-right: 1em;
   padding-top: 0.3em;
   padding-bottom: 0.3em;
   align-items: center;
