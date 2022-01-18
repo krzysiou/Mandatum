@@ -9,6 +9,7 @@
   margin-top: 5px;
   margin-bottom: 5px;
   border-radius: 10px;
+  transition: 100ms;
 }
 
 .cont {
@@ -16,4 +17,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.friend-tab:hover {
+  background-color: #1a363f;
 }
