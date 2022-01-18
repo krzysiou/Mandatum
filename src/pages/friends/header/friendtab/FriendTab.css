@@ -1,0 +1,19 @@
+@import "../../../../vars.css";
+
+.friend-tab {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  background-color: var(--bcg);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.cont {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

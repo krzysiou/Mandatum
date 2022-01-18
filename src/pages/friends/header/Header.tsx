@@ -26,7 +26,9 @@ export function Header(): JSX.Element {
         <div className='search-bar-name'>
           <SearchBar placeholder="search name.." name="friend-name"/>
         </div>
-        <FriendTab/>
+        <div className='friend-box-container'>
+          <FriendTab/>
+        </div>
         <SearchBar placeholder="add friend.." name="add-friend"/>
         <Button label="add friend" width="8rem" onPress={addFriend('friend1')}/>
       </div>
