@@ -10,6 +10,8 @@ import "./Header.css"
 export function Header():JSX.Element {
 
   //register user
+
+  //!!! PROBLEM with type assertions !!!
   async function Register() {
     const user = {
       id: uuid(),
