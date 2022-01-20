@@ -3,28 +3,29 @@ import { SearchBar } from "../../../utilities/components/navbar/navbarcontents/s
 import { redirect, submitRegister } from "../../../utilities/functions/globalFunctions";
 import { DropdownItem } from "../../../utilities/components/dropdown/dropdownitem/DropdownItem";
 import { setCookie } from "../../../utilities/functions/cookies";
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import { uuid } from "uuidv4";
 import "./Header.css"
 
 export function Header():JSX.Element {
-
-  //register user
-
   //!!! PROBLEM with type assertions !!!
+  //register user function
   async function Register() {
     const user = {
       id: uuid(),
-      name: "john",//(document.getElementById('username') as HTMLInputElement).value,
+      username: "john1234",//(document.getElementById('username') as HTMLInputElement).value,
       email: "john@gmail.com",//(document.getElementById('email') as HTMLInputElement).value,
       password: "123321"//(document.getElementById('password') as HTMLInputElement).value,
     };
-    try {
-      const response = await axios.post('http://localhost:3001/users/register', user);
-      setCookie('accessToken', response.data.accessToken, 1);
-    } catch (error) {
+      //register user request
+      axios.post('http://localhost:3001/users/register', user)
+      .then(function (response) {
+        setCookie('accessToken', response.data.accessToken, 1);
+        redirect('home')();
+      })
+      .catch(function (error) {
         console.log(error);
-    };
+      });
   }
 
   return (
@@ -49,7 +50,7 @@ export function Header():JSX.Element {
         </div>
         <div className="register-box">
           <p className="input-text">Password</p>
-          <SearchBar placeholder="password.." name="password"/>
+          <SearchBar placeholder="password.." name="password" password={true}/>
         </div>
         <div className="register-box">
           <div className="button-box">

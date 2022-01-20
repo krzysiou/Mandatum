@@ -4,13 +4,14 @@ import { NotLogged } from "../../utilities/components/notlogged/NotLogged"
 import { Header } from "./header/Header";
 import { useState } from "react";
 import { checkCookie } from "../../utilities/functions/cookies";
+import { logoutUser } from "../../utilities/functions/globalFunctions";
 
 export function Friends(): JSX.Element {
   const [logged, setLogged] = useState(checkCookie("accessToken"));
 
   return (
     <div className="friends">
-      <NavBar logged={logged} logOut={()=>setLogged(false)}/>
+      <NavBar logged={logged} logOut={logoutUser(setLogged)}/>
       { logged ? null : <NotLogged label="Friends"/> }
       { logged ? <Header/> : null }
       <Footer/>

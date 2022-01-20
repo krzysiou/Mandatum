@@ -3,6 +3,7 @@ import { Footer } from "../../utilities/components/footer/Footer"
 import { Header } from "./header/Header"
 import { useState } from "react";
 import { checkCookie } from "../../utilities/functions/cookies";
+import { logoutUser } from "../../utilities/functions/globalFunctions";
 
 export function Login():JSX.Element {
  
@@ -10,7 +11,7 @@ export function Login():JSX.Element {
 
   return (
     <div className="login">
-      <NavBar logged={logged} logOut={()=>setLogged(false)}/>
+      <NavBar logged={logged} logOut={logoutUser(setLogged)}/>
       <Header/>
       <Footer/>
     </div>

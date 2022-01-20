@@ -1,3 +1,5 @@
+import { deleteCookie } from "./cookies";
+
 //redirect to url
 export function redirect(str: string) {
   return () => window.location.href = str;
@@ -21,4 +23,12 @@ export function addFriend(name: string) {
 //edits profile picture
 export function editProfile(){
   return () => alert('editting profile');
+}
+
+//logout
+export function logoutUser(func:(state:boolean)=>void){
+  return () => {
+    deleteCookie('accessToken');
+    func(false);
+  }
 }

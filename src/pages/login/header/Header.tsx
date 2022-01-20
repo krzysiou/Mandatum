@@ -23,7 +23,7 @@ export function Header():JSX.Element {
         </div>
         <div className="login-box">
           <p className="input-text">Password</p>
-          <SearchBar placeholder="password.." name="password"/>
+          <SearchBar placeholder="password.." name="password" password={true}/>
         </div>
         <div className="login-box">
           <div className="button-box">
