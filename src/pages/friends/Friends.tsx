@@ -6,8 +6,7 @@ import { useState } from "react";
 import { checkCookie } from "../../utilities/functions/cookies";
 
 export function Friends(): JSX.Element {
-  // const [logged, setLogged] = useState(checkCookie("accessToken"));
-  const [logged, setLogged] = useState(true);
+  const [logged, setLogged] = useState(checkCookie("accessToken"));
 
   return (
     <div className="friends">

@@ -8,7 +8,7 @@ type Props = {
 export function SearchBar({placeholder, name}:Props): JSX.Element {
   return (
     <div className="search-bar">
-      <input type="text" placeholder={placeholder} name={name}/>
+      <input type="text" placeholder={placeholder} id={name}/>
     </div>
   );
 }
