@@ -3,19 +3,18 @@ import { SearchBar } from "../../../utilities/components/navbar/navbarcontents/s
 import { redirect, submitRegister } from "../../../utilities/functions/globalFunctions";
 import { DropdownItem } from "../../../utilities/components/dropdown/dropdownitem/DropdownItem";
 import { setCookie } from "../../../utilities/functions/cookies";
-import axios, { AxiosResponse } from "axios";
+import axios from "axios";
 import { uuid } from "uuidv4";
 import "./Header.css"
 
 export function Header():JSX.Element {
-  //!!! PROBLEM with type assertions !!!
   //register user function
   async function Register() {
     const user = {
       id: uuid(),
-      username: "john1234",//(document.getElementById('username') as HTMLInputElement).value,
-      email: "john@gmail.com",//(document.getElementById('email') as HTMLInputElement).value,
-      password: "123321"//(document.getElementById('password') as HTMLInputElement).value,
+      username: (document.getElementById('username') as HTMLInputElement).value,
+      email: (document.getElementById('email') as HTMLInputElement).value,
+      password: (document.getElementById('password') as HTMLInputElement).value,
     };
       //register user request
       axios.post('http://localhost:3001/users/register', user)
