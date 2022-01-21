@@ -2,10 +2,21 @@ input {
   width: 14em;
   text-align: left;
   border: none;
-  border-radius: 5px;
   background-color: #040e12;
   color: whitesmoke;
   outline: none;
+  box-shadow: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    box-shadow: 0 0 0 30px #040e12 inset !important;
+}
+
+input:-webkit-autofill{
+  -webkit-text-fill-color: whitesmoke !important;
 }
 
 .search-bar {

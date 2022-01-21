@@ -12,7 +12,8 @@ export function Recent(): JSX.Element {
   return (
     <div className="recent">
       <NavBar logged={logged} logOut={logoutUser(setLogged)}/>
-      <NotLogged label="Recent"/>
+      { logged ? null : <NotLogged label="Recent"/> }
+      { logged ? <h1>Logged on Recent</h1> : null }
       <Footer/>
     </div>
   )

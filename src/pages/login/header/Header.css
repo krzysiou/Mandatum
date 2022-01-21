@@ -11,6 +11,12 @@
   justify-content: center;
 }
 
+.error-handler {
+  color: rgb(177, 34, 34);
+  margin: 0;
+  margin-top: 10px;
+}
+
 .main-login-body {
   padding: 2em 3.5em;
   display: flex;
@@ -139,6 +145,10 @@
 
   .login-box {
     margin-top: 1em;
+  }
+
+  .error-handler {
+    font-size: 12px;
   }
 
   .header-text {
