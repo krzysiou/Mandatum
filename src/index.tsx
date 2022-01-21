@@ -8,7 +8,7 @@ import { Friends } from "./pages/friends/Friends";
 import { Recent } from "./pages/recent/Recent";
 import { Pinned } from "./pages/pinned/Pinned";
 
-import './App.css';
+import './index.css';
 
 const rootElement = document.getElementById("root");
   render(
