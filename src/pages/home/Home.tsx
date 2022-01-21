@@ -12,7 +12,7 @@ export function Home(): JSX.Element {
   return (
     <div className="home">
       <NavBar logged={logged} logOut={logoutUser(setLogged)}/>
-      <Header/>
+      <Header log={logged}/>
       <Footer/>
     </div>
   )

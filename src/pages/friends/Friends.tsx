@@ -12,8 +12,7 @@ export function Friends(): JSX.Element {
   return (
     <div className="friends">
       <NavBar logged={logged} logOut={logoutUser(setLogged)}/>
-      { logged ? null : <NotLogged label="Friends"/> }
-      { logged ? <Header/> : null }
+      { logged ? <Header/> : <NotLogged label="Friends"/> }
       <Footer/>
     </div>
   )

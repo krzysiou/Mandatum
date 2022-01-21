@@ -2,7 +2,12 @@ import { redirect } from '../../../utilities/functions/globalFunctions'
 import logo from './logo.svg'
 import "./Header.css"
 
-export function Header(): JSX.Element {
+type Props = {
+  log:boolean
+}
+
+export function Header({log}:Props): JSX.Element {
+
   return (
     <div className="home-header">
       <div className="main">
@@ -16,7 +21,7 @@ export function Header(): JSX.Element {
       </div>
       <div className="description">
         <p>Try it out now and test many new features</p>
-        <a className="register-slogan" onClick={redirect('register')}>Create new account now</a>
+        { log ? null : <a className="register-slogan" onClick={redirect('register')}>Create new account now</a> }
       </div>
     </div>
   )
