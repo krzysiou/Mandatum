@@ -12,7 +12,7 @@ export function Pinned(): JSX.Element {
   return (
     <div className="pinned">
       <NavBar logged={logged} logOut={logoutUser(setLogged)}/>
-      { logged ? null : <NotLogged label="Pinned"/> }
+      { logged ? <p>test pinned</p> : <NotLogged label="Pinned"/> }
       <Footer/>
     </div>
   )
