@@ -27,10 +27,8 @@ export function FriendTab({name}:Props): JSX.Element {
     axios.post('http://localhost:3001/users/get/id', {username: name}, { headers: {'Authorization': `Bearer ${getCookie('accessToken')}`}})
     .then(function (response) {
       propId = response.data.id;
-      console.log(propId);
       //set label
       if(user.pinned.includes(propId)){
-        console.log('yes');
         setLabel('unpin');
       }
       else {
