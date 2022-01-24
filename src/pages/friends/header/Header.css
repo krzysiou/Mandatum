@@ -1,5 +1,35 @@
 @import "../../../vars.css";
 
+.dialog {
+  position: relative;
+  margin: 0 auto;
+  top: -15rem;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 100;
+  color: var(--col2);
+  text-align: center;
+  height: 100%;
+  background-color: var(--nav);
+  border: var(--bor);
+  box-shadow: 8px 8px 37px 30px rgb(10 10 10);
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  width: 30rem;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .friends-header {
   margin-top: 5em;
   display: flex;
@@ -57,6 +87,15 @@
 @media screen and (max-width: 720px) {
   .friends-header{
     flex-direction: column;
+  }
+
+  .dialog {
+    top: -25rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 15rem;
   }
 
   .account-box {

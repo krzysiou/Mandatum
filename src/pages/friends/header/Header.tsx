@@ -1,14 +1,14 @@
 import './Header.css'
 import { SearchBar } from '../../../utilities/components/navbar/navbarcontents/searchbar/SearchBar'
 import { Button } from '../../../utilities/components/button/Button'
-import { editProfile } from '../../../utilities/functions/globalFunctions'
 import { useState, useEffect } from 'react'
 import { FriendTab } from './friendtab/FriendTab'
 import { setCookie, getCookie } from '../../../utilities/functions/cookies'
+import { Dialog } from '@headlessui/react'
 import axios from 'axios'
 
 export function Header(): JSX.Element {
-
+  const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [user, setUser] = useState({id: '', username: '', friends: [], pined: [], recent: []});
 
@@ -46,8 +46,17 @@ export function Header(): JSX.Element {
         <div className='profile'>
           <p className='username'>{user.username}</p>
         </div>
-        <Button label="edit" width="4rem" onPress={editProfile()}/>
+        <Button label="edit" width="4rem" onPress={()=>setIsOpen(prev => !prev)}/>
       </div>
+      <Dialog className="dialog" open={isOpen} onClose={() => setIsOpen(false)}>
+        <Dialog.Overlay />
+        <Dialog.Title>Change your username</Dialog.Title>
+        <SearchBar placeholder="new username.." name="update-username"/>
+        <div className='popup-buttons'>
+          <Button label="submit" width="4rem" onPress={()=>setIsOpen(false)}/>
+          <Button label="cancel" width="4rem" onPress={()=>setIsOpen(false)}/>
+        </div>
+    </Dialog>
       <div className='friend-box box'>
         <div className='search-bar-name'>
           <SearchBar placeholder="search name.." name="friend-name"/>
