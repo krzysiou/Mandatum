@@ -23,6 +23,10 @@
   width: 30rem;
 }
 
+.username-error {
+  color:whitesmoke(133, 133, 133);;
+}
+
 .dialog-title {
   border-bottom: 1px solid #1691a1;
   margin-bottom: 2rem;
@@ -86,6 +90,7 @@
 .friend-box-container {
   width: 100%;
   max-height: 300px;
+  min-height: 30px;
   overflow: scroll;
 }
 

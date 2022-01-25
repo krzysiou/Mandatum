@@ -2,7 +2,7 @@
 
 .friend-tab {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   background-color: var(--bcg);
@@ -12,11 +12,20 @@
   transition: 100ms;
 }
 
+.friend-pin-button {
+  display: flex;
+  align-items: flex-end;
+}
+
 .cont {
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.friend-name {
+  margin-left: 2rem;
 }
 
 .friend-tab:hover {

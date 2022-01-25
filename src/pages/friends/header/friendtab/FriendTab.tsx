@@ -6,13 +6,14 @@ import { UserData } from '../../../../utilities/functions/globalFunctions'
 import axios from 'axios'
 
 type Props = {
-  name: string,
+  id: string,
 }
 
-export function FriendTab({name}:Props): JSX.Element {
+export function FriendTab({id}:Props): JSX.Element {
   const [label, setLabel] = useState('pin')
+  const [name, setName] = useState('');
   let user:UserData = {id: '', username: '', friends:[], pinned:[], recent:[]}
-  let propId:string = '';
+  
   useEffect(() => {
     //decode token
     axios.post('http://localhost:3001/users/get', {}, { headers: {'Authorization': `Bearer ${getCookie('accessToken')}`}})
@@ -23,15 +24,14 @@ export function FriendTab({name}:Props): JSX.Element {
     .catch(function (error) {
       console.log(error);
     });
-    //get id of prop
-    axios.post('http://localhost:3001/users/get/id', {username: name}, { headers: {'Authorization': `Bearer ${getCookie('accessToken')}`}})
+    //get username of prop
+    axios.post('http://localhost:3001/users/get/username', {id: id}, { headers: {'Authorization': `Bearer ${getCookie('accessToken')}`}})
     .then(function (response) {
-      propId = response.data.id;
+      setName(response.data.username);
       //set label
-      if(user.pinned.includes(propId)){
+      if(user.pinned.includes(id)){
         setLabel('unpin');
-      }
-      else {
+      } else {
         setLabel('pin');
       }
     })
