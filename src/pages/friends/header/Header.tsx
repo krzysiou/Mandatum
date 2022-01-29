@@ -95,7 +95,7 @@ export function Header(): JSX.Element {
         <div className='search-bar-name'>
           <SearchBar placeholder="search name.." name="friend-name"/>
         </div>
-        { user.friends.length !== 0 && <div className='friend-box-container'>{listOfFriends}</div>}
+        { user.friends.length !== 0 ? <div className='friend-box-container'>{listOfFriends}</div> : <p>Empty</p>}
         { message && <p className="message-handler"> { message } </p> }
         <SearchBar placeholder="add friend.." name="add-friend" onChange={setFriend}/>
         <Button label="add friend" width="8rem" onPress={() => newFriend.current && addFriend(setMessage, newFriend.current, setUser)}/>
