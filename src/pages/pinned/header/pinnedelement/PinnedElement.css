@@ -1,0 +1,33 @@
+@import "../../../../vars.css";
+
+.friend-tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: var(--bcg);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  transition: 100ms;
+}
+
+.friend-pin-button {
+  display: flex;
+  align-items: flex-end;
+}
+
+.cont {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.friend-name {
+  margin-left: 2rem;
+}
+
+.friend-tab:hover {
+  background-color: #1a363f;
+}

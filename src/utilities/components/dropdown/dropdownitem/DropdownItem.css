@@ -1,4 +1,5 @@
 .menu-item {
+  margin: 0;
   display: flex;
   padding-left: 1em;
   padding-right: 1em;
