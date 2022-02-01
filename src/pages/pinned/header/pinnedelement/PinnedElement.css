@@ -1,6 +1,6 @@
 @import "../../../../vars.css";
 
-.friend-tab {
+.pinned-element {
   display: flex;
   justify-content: space-between;
   align-items: center;

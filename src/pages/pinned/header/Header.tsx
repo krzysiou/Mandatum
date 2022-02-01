@@ -29,7 +29,16 @@ export function Header():JSX.Element {
 
   return (
     <div className="pinned-header">
-      { user.pinned.length !== 0 ? <div className='friend-box-container'>{listOfFriends}</div> : <p>Empty</p>}
+      { user.pinned.length !== 0
+      ?
+      <div className="cont-pinned">
+        <div className='pinned-box-container'>{listOfFriends}</div>
+      </div>
+      :
+      <>
+      <h1 className="header-msg">Oops . .</h1>
+       <p className="header-parag">Seems like u havent <b>pinned</b> anyone yet.<br/>Visit <b>Friends</b> page to pin someone!</p>
+      </>}
     </div>
   );
 }

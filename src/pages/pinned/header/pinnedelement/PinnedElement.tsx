@@ -40,7 +40,7 @@ export function PinnedElement({id, decodeToken, setUser}:Props): JSX.Element {
 
 
   return (
-    <div className="friend-tab">
+    <div className="pinned-element">
       <div className='friend-name cont'>{name}</div>
       <div className='friend-pin-button cont'>
         <Button label='remove' width='4rem' onPress={() => removePin(name, decodeToken, setUser)}/>
