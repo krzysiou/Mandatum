@@ -5,6 +5,7 @@ import { useState } from "react";
 import { checkCookie } from "../../utilities/functions/cookies";
 import { logoutUser } from "../../utilities/functions/globalFunctions";
 
+
 export function Login():JSX.Element {
  
   const [logged, setLogged] = useState(checkCookie("accessToken"));
