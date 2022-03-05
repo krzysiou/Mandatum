@@ -4,6 +4,7 @@ import { NotLogged } from "../../utilities/components/notlogged/NotLogged"
 import { useState } from "react";
 import { checkCookie } from "../../utilities/functions/cookies";
 import { logoutUser } from "../../utilities/functions/globalFunctions";
+import { Header } from "./header/Header";
 
 export function Recent(): JSX.Element {
 
@@ -12,7 +13,7 @@ export function Recent(): JSX.Element {
   return (
     <div className="recent">
       <NavBar logged={logged} logOut={logoutUser(setLogged)}/>
-      { logged ? <p>test recent</p> : <NotLogged label="Recent"/> }
+      { logged ? <Header/> : <NotLogged label="Recent"/> }
       <Footer/>
     </div>
   )
