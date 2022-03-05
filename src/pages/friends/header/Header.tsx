@@ -35,7 +35,7 @@ async function changeUsername(setUser: React.Dispatch<React.SetStateAction<UserD
 }
 
 //add friend
-async function addFriend(setMessage: React.Dispatch<React.SetStateAction<string>>, friendUsername: string, setUser: React.Dispatch<React.SetStateAction<UserData>>) {
+async function addFriend(friendUsername: string, setUser: React.Dispatch<React.SetStateAction<UserData>>) {
   const friendToAdd = {
     username: friendUsername,
   };
@@ -43,24 +43,19 @@ async function addFriend(setMessage: React.Dispatch<React.SetStateAction<string>
   .then(function (response) {
     setCookie('accessToken', response.data.accessToken, 1);
     setUser((user)=>({...user, friends: [...user.friends, response.data.id]}));
-    setMessage(response.data.message);
   })
-  .catch(function (error) {
-    setMessage(error.response.data.error);
-  });
 }
 
 export function Header(): JSX.Element {
   const [user, setUser] = useState<UserData>({id: '', username: '', friends: [], pinned: [], recent: []});
   const [isOpen, setIsOpen] = useState(false);
   const [changeUsernameError, setChangeUsernameError] = useState('');
-  const [message, setMessage] = useState('');
 
   const newFriend = useRef<string | null>(null);
 
   //map friend array
   const listOfFriends = user.friends.map((id) => {
-    return <FriendTab id={id} key={id}/>
+    return <FriendTab id={id} key={id} decodeToken={decodeToken} setUser={setUser}/>
   });
 
   //function to keep track of user input in 'addFriend' searchBar
@@ -93,9 +88,10 @@ export function Header(): JSX.Element {
         </Dialog>
       <div className='friend-box box'>
         { user.friends.length !== 0 ? <div className='friend-box-container'>{listOfFriends}</div> : <p>Empty</p>}
-        { message && <p className="message-handler"> { message } </p> }
-        <SearchBar placeholder="add friend.." name="add-friend" onChange={setFriend}/>
-        <Button label="add friend" width="8rem" onPress={() => newFriend.current && addFriend(setMessage, newFriend.current, setUser)}/>
+        <div className='customsearchbar'>
+          <SearchBar placeholder="add friend.." name="add-friend" onChange={setFriend}/>
+        </div>
+        <Button label="add friend" width="8rem" onPress={() => newFriend.current && addFriend(newFriend.current, setUser)}/>
       </div>
     </div>
   )
