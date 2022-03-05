@@ -64,6 +64,16 @@ async function removeFriend(id:string, decodeToken:(setUser: React.Dispatch<Reac
     console.log(error);
   });
 }
+//handles user click
+export async function handleClick(id:string){
+  axios.post('http://localhost:3001/users/click', {id: id}, { headers: {'Authorization': `Bearer ${getCookie('accessToken')}`}})
+  .then(function(response){
+    setCookie('accessToken', response.data.accessToken, 1);
+  })
+  .catch (function (error) {
+    console.log(error);
+  });
+}
 
 export function FriendTab({id, decodeToken, setUser}:Props): JSX.Element {
   const [name, setName] = useState('');
@@ -78,7 +88,7 @@ export function FriendTab({id, decodeToken, setUser}:Props): JSX.Element {
 
   return (
     <div className="friend-tab">
-      <div className='friend-name cont'>{name}</div>
+      <div className='friend-name cont' onClick={()=>handleClick(id)}>{name}</div>
       <div className='friend-pin-button cont'>
         <Button label={label} width='3rem' onPress={() => pin(setLabel, label, name)}/>
         <Button label="X" width='2rem' onPress={() => removeFriend(id, decodeToken, setUser)}/>

@@ -1,8 +1,8 @@
 @import "../../../../vars.css";
 
-.friend-tab {
+.recent-element {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   background-color: var(--bcg);
@@ -12,9 +12,8 @@
   transition: 100ms;
 }
 
-.friend-pin-button {
-  display: flex;
-  align-items: flex-end;
+.recent-element:hover {
+  background-color: #1a363f;
 }
 
 .cont {
@@ -25,11 +24,5 @@
 }
 
 .friend-name {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  padding: 0 2rem;
-}
-
-.friend-tab:hover {
-  background-color: #1a363f;
+  margin-left: 2rem;
 }
