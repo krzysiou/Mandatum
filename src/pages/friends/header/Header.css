@@ -23,6 +23,10 @@
   width: 30rem;
 }
 
+.customsearchbar {
+  margin-bottom: 0.5rem;
+}
+
 .username-error {
   color:whitesmoke(133, 133, 133);;
 }
