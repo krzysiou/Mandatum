@@ -35,7 +35,7 @@ async function changeUsername(setUser: React.Dispatch<React.SetStateAction<UserD
 }
 
 //add friend
-async function addFriend(friendUsername: string, setUser: React.Dispatch<React.SetStateAction<UserData>>) {
+async function addFriend(friendUsername: string, setUser: React.Dispatch<React.SetStateAction<UserData>>, setChangeUsernameError : React.Dispatch<React.SetStateAction<string>>) {
   const friendToAdd = {
     username: friendUsername,
   };
@@ -43,13 +43,18 @@ async function addFriend(friendUsername: string, setUser: React.Dispatch<React.S
   .then(function (response) {
     setCookie('accessToken', response.data.accessToken, 1);
     setUser((user)=>({...user, friends: [...user.friends, response.data.id]}));
+    setChangeUsernameError('')
   })
+  .catch(function (error) {
+    setChangeUsernameError(error.response.data.error)
+  });
 }
 
 export function Header(): JSX.Element {
   const [user, setUser] = useState<UserData>({id: '', username: '', friends: [], pinned: [], recent: []});
   const [isOpen, setIsOpen] = useState(false);
   const [changeUsernameError, setChangeUsernameError] = useState('');
+  const [addUserError, setAddUserError] = useState('');
 
   const newFriend = useRef<string | null>(null);
 
@@ -89,9 +94,10 @@ export function Header(): JSX.Element {
       <div className='friend-box box'>
         { user.friends.length !== 0 ? <div className='friend-box-container'>{listOfFriends}</div> : <p>Empty</p>}
         <div className='customsearchbar'>
+          { addUserError && <p className="username-error"> { addUserError } </p> }
           <SearchBar placeholder="add friend.." name="add-friend" onChange={setFriend}/>
         </div>
-        <Button label="add friend" width="8rem" onPress={() => newFriend.current && addFriend(newFriend.current, setUser)}/>
+        <Button label="add friend" width="8rem" onPress={() => newFriend.current && addFriend(newFriend.current, setUser, setAddUserError)}/>
       </div>
     </div>
   )
