@@ -27,10 +27,6 @@ It briefly explains the main purpose of the site and lets you ```log in``` or  `
 
 ![home responsive](https://user-images.githubusercontent.com/60892747/163669985-ad470836-e1d9-433f-88be-0e90b4a7f435.png)
 
-Also when logged in, it briefly changes navbar
-
-![home while logged in](https://user-images.githubusercontent.com/60892747/163669995-b410403f-c872-4b15-8677-5a5effd1152b.png)
-
 ### Log in [component](./src/pages/login/Login.tsx)
 
 ![log in](https://user-images.githubusercontent.com/60892747/163670012-0a346b57-61a8-4fd9-85ce-213d890c96bf.png)
