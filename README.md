@@ -29,7 +29,7 @@ It briefly explains the main purpose of the site and lets you ```log in``` or  `
 
 ### Log in [component](./src/pages/login/Login.tsx)
 
-![log in](https://user-images.githubusercontent.com/60892747/163670012-0a346b57-61a8-4fd9-85ce-213d890c96bf.png)
+![Zrzut ekranu 2022-04-16 o 11 48 30](https://user-images.githubusercontent.com/60892747/163670402-d3756974-42df-466a-91d0-595fc8d03df5.png)
 
 Basic Log in form. Two input forms that gather data which will be sent to the server. It also contains button which allows you to redirect to ```Sign in``` if you don't have an account.
 
