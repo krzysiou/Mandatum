@@ -21,9 +21,12 @@ The website is composed of many sub-websites which are being shown according to 
 
 ### Home [component](./src/pages/home/Home.tsx)
 
-![home](https://user-images.githubusercontent.com/60892747/163669920-86668bf5-42f9-41f0-a981-b9cf17a0fff3.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/60892747/163669920-86668bf5-42f9-41f0-a981-b9cf17a0fff3.png" />
+</p>
 
 It briefly explains the main purpose of the site and lets you ```log in``` or  ```sign in```. After logging or signing in you will be provided with and ```access token``` that will be stored in cookies. it will allow you to skip logging process and be redirected automatically to your account page. The page is fully responsive. It have a dropdown menu available when the window gets small.
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/60892747/163669985-ad470836-e1d9-433f-88be-0e90b4a7f435.png" />
 </p>
