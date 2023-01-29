@@ -1,7 +1,5 @@
 # Mandatum
 
-test
-
 A website allowing you to add, pin and message friends. Website is fully responsive. I utilizes relational databases to save recent messages and load them when needed.
 
 # Work in progress
