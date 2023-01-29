@@ -1,5 +1,5 @@
 import './Logo.css';
-import logo from './logo.svg'
+import logo from './logo.svg';
 
 export function Logo(): JSX.Element {
 

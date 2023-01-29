@@ -1,4 +1,4 @@
-import './Button.css'
+import './Button.css';
 
 type Props = {
   label: string,
@@ -12,4 +12,4 @@ export function Button({label, width, onPress}:Props): JSX.Element {
       <a className='button-component' onClick={ onPress }>{ label }</a>
     </div>
   );
- }
+}

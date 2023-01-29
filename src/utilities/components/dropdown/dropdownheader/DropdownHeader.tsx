@@ -1,4 +1,4 @@
-import "./DropdownHeader.css"
+import './DropdownHeader.css';
 
 type Props = {
   label: string,

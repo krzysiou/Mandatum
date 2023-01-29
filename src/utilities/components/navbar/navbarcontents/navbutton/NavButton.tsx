@@ -1,4 +1,4 @@
-import "./NavButton.css"
+import './NavButton.css';
 
 type Props = {
   label: string,
@@ -6,5 +6,5 @@ type Props = {
 }
 
 export function NavButton({label, onPress}:Props): JSX.Element {
-  return <a className='nav-button' onClick={ onPress }>{ label }</a>
+  return <a className='nav-button' onClick={ onPress }>{ label }</a>;
 }

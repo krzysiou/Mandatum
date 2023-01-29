@@ -10,5 +10,5 @@ export function NavBarContents({children}:Props):JSX.Element {
     <div className="navbar">
       {children}
     </div>
-  )
+  );
 }

@@ -7,5 +7,5 @@ type Props = {
 export function Dropdown({children}:Props):JSX.Element {
   return (
     <div className='dropdown'>{children}</div>
-  )
+  );
 }

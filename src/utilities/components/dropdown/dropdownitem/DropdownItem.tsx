@@ -1,4 +1,4 @@
-import './DropdownItem.css'
+import './DropdownItem.css';
 
 type Props = {
   label: string,
@@ -6,5 +6,5 @@ type Props = {
 }
 
 export function DropdownItem({label, onPress}:Props): JSX.Element {
-  return <p className='menu-item' onClick={ onPress }>{ label }</p>
- }
+  return <p className='menu-item' onClick={ onPress }>{ label }</p>;
+}

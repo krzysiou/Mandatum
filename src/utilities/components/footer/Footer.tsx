@@ -9,5 +9,5 @@ export function Footer():JSX.Element {
         <a className='footer-link' onClick={() => window.open('https://github.com/krzysiou', '_blank')}>Follow my github here</a>
       </div>
     </div>
-  )
+  );
 }

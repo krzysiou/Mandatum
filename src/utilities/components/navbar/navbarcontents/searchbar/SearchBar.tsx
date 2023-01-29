@@ -1,4 +1,4 @@
-import "./SearchBar.css"
+import './SearchBar.css';
 
 type Props = {
   placeholder: string,
@@ -7,10 +7,12 @@ type Props = {
   onChange?: (value:string)=>void
 }
 
-export function SearchBar({placeholder, name, password = false, onChange = () => {return}}:Props): JSX.Element {
+export function SearchBar({placeholder, name, password = false, onChange = () => {
+  return;
+}}:Props): JSX.Element {
   return (
     <div className="search-bar">
-      <input type={password ? "password" : "text"} placeholder={placeholder} id={name} onChange={(e)=>onChange(e.target.value)}/>
+      <input type={password ? 'password' : 'text'} placeholder={placeholder} id={name} onChange={(e)=>onChange(e.target.value)}/>
     </div>
   );
 }

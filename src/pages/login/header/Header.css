@@ -56,7 +56,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:flex-start;
+  align-items: flex-start;
 }
 
 .button-box {
@@ -86,7 +86,6 @@
 .button-right:hover {
   background-color: #116d79;
 }
-
 
 .register-redirect {
   margin-top: 1em;

@@ -1,12 +1,12 @@
-import { Button } from "../../../utilities/components/button/Button";
-import { SearchBar } from "../../../utilities/components/navbar/navbarcontents/searchbar/SearchBar";
-import { redirect } from "../../../utilities/functions/globalFunctions";
-import { DropdownItem } from "../../../utilities/components/dropdown/dropdownitem/DropdownItem";
-import { setCookie } from "../../../utilities/functions/cookies";
-import { useState } from "react";
-import axios from "axios";
-import { uuid } from "uuidv4";
-import "./Header.css"
+import { Button } from '../../../utilities/components/button/Button';
+import { SearchBar } from '../../../utilities/components/navbar/navbarcontents/searchbar/SearchBar';
+import { redirect } from '../../../utilities/functions/globalFunctions';
+import { DropdownItem } from '../../../utilities/components/dropdown/dropdownitem/DropdownItem';
+import { setCookie } from '../../../utilities/functions/cookies';
+import { useState } from 'react';
+import axios from 'axios';
+import { uuid } from 'uuidv4';
+import './Header.css';
 
 export function Header():JSX.Element {
   //error state
@@ -20,7 +20,7 @@ export function Header():JSX.Element {
       password: (document.getElementById('password') as HTMLInputElement).value,
     };
       //register user request
-      axios.post('http://localhost:3001/users/register', userToRegister)
+    axios.post('http://localhost:3001/users/register', userToRegister)
       .then(function (response) {
         setCookie('accessToken', response.data.accessToken, 1);
         redirect('home')();

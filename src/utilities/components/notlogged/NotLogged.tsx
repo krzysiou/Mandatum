@@ -1,6 +1,6 @@
-import { Button } from '../button/Button'
-import { redirect } from '../../../utilities/functions/globalFunctions'
-import './NotLogged.css'
+import { Button } from '../button/Button';
+import { redirect } from '../../../utilities/functions/globalFunctions';
+import './NotLogged.css';
 
 type Props = {
   label: string;
@@ -19,5 +19,5 @@ export function NotLogged( { label } : Props ): JSX.Element {
         <Button width="8rem" label='log in' onPress={redirect('login')} />
       </div>
     </div>
-  )
+  );
 }
